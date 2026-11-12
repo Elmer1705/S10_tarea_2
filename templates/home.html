@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio - Mi Tienda{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Bienvenido a Mi Tienda</h1>
+    <p>Sistema de gestión y facturación de productos.</p>
+</section>
+
+<section class="tarjetas-grid">
+    <!-- Tarjeta de Marcas (Toda la caja es un enlace) -->
+    <a href="{% url 'marca_list' %}" style="text-decoration: none; color: inherit; display: block;">
+        <div class="tarjeta">
+            <h3>Marcas</h3>
+            <p>Administra los proveedores y marcas registradas en el sistema.</p>
+        </div>
+    </a>
+
+    <!-- Tarjeta de Productos (Toda la caja es un enlace) -->
+    <a href="{% url 'producto_list' %}" style="text-decoration: none; color: inherit; display: block;">
+        <div class="tarjeta">
+            <h3>Productos</h3>
+            <p>Gestiona el inventario, precios y stock disponible.</p>
+        </div>
+    </a>
+</section>
+{% endblock %}
